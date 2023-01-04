@@ -35,12 +35,13 @@ def pytest_html_results_table_row(report, cells):
     cells.insert(2, html.td(report.expected_output))
     cells.insert(3, html.td(report.actual_output))
     cells.pop()
+
 @pytest.hookimpl(hookwrapper=True)
-def pytest_runtest_makereport(item, call):
+def pytest_runtest_makereport(item,call):
     outcome = yield
     report = outcome.get_result()
-    report.cls.serial_no = item
+    extra = getattr(report, 'extra', [])
+    report.serial_no = 10
     report.action = (["click the search button and use filter to get data"])
     report.actual_output = (["as per filter data are collected"])
     report.expected_output ="all data are collected"
-    report.result = str(item.function.__doc__)

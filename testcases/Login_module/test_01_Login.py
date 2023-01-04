@@ -13,6 +13,7 @@ class TestCredentials():
         lp.login()
         time.sleep(10)
         if self.driver.title == "TruTesta™ Deliverables":
+          # self.report.serial_no = 1
           print("Correct username and password passed successfully")
         else:
           print("testcase failed!!!")
