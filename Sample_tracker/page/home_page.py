@@ -44,7 +44,13 @@ class HomePage():
         delete = self.driver.find_element(By.XPATH,"//button[normalize-space()='Delete']")
         delete.click()
 
+    def search_input(self,search_value):
+        search = self.driver.find_element(By.XPATH,"//input[@id='quick-search']")
+        search.send_keys(search_value)
 
+    def search_button(self):
+        search_btn = self.driver.find_element(By.XPATH,"//i[@class='fa fa-search']")
+        search_btn.click()
 
 
 
