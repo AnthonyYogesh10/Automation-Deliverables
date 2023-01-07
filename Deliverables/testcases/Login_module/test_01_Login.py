@@ -1,7 +1,7 @@
 import time
 import pytest
 
-from pages.trutesta_login_page import LoginPage
+from Deliverables.pages.trutesta_login_page import LoginPage
 
 @pytest.mark.usefixtures("setup") # i wasted time here without using the @ symbol
 class TestCredentials():
