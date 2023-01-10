@@ -1,7 +1,7 @@
 import time
 import pytest
 
-from Deliverables.pages.trutesta_login_page import LoginPage
+from pages.trutesta_login_page import LoginPage
 
 # 04 log in with incorrect username and incorrect password
 @pytest.mark.usefixtures("setup")

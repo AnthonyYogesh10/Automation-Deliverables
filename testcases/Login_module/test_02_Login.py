@@ -1,7 +1,7 @@
 import time
 import pytest
 
-from Deliverables.pages.trutesta_login_page import LoginPage
+from pages.trutesta_login_page import LoginPage
 
 @pytest.mark.usefixtures("setup")
 class TestCredential_2():
